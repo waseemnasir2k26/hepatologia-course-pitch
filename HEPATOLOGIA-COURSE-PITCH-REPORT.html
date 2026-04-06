@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEPATOLOGÍA — Propuesta de Embudo de Ventas para Curso Médico | SkynetJoe</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #0A4D4A;
+  --teal-dark: #063432;
+  --teal-light: #E8F5F4;
+  --navy: #0B1D3A;
+  --gold: #C9963C;
+  --gold-light: #F5E6C8;
+  --white: #FFFFFF;
+  --ivory: #FAFBF9;
+  --cream: #F5F3EE;
+  --text: #1A2332;
+  --text-light: #5A6577;
+  --text-muted: #8A94A6;
+  --border: #E2E6EC;
+  --green: #22A06B;
+  --red: #E34935;
+  --orange: #E97F33;
+  --blue: #1A73E8;
+  --purple: #7B61FF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ─── COVER PAGE ─── */
+.cover {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--teal-dark) 40%, var(--teal) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background:
+    radial-gradient(circle at 25% 35%, rgba(201,150,60,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 65%, rgba(10,77,74,0.3) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(201,150,60,0.06) 0%, transparent 35%);
+}
+.cover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.cover * { position: relative; z-index: 1; }
+
+.cover .hepatologia-badge {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  background: linear-gradient(135deg, var(--gold), #D4A843);
+  color: var(--navy);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(201,150,60,0.4);
+}
+.cover .medical-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+.cover h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  max-width: 800px;
+}
+.cover h1 span { color: var(--gold); }
+.cover .subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+.cover .divider-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.5rem auto;
+}
+.cover .meta {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.85rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+}
+.cover .meta strong { color: var(--gold); }
+.cover .agency-logo {
+  margin-top: 2.5rem;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(201,150,60,0.3);
+  border-radius: 6px;
+  display: inline-block;
+}
+.cover .agency-logo .name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.15em;
+}
+.cover .agency-logo .tagline {
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+/* ─── TABLE OF CONTENTS ─── */
+.toc-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.toc-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.section-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.toc-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.toc-card:hover {
+  border-color: var(--teal);
+  box-shadow: 0 6px 20px rgba(10,77,74,0.12);
+  transform: translateY(-3px);
+}
+.toc-card .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--teal);
+  font-weight: 700;
+  line-height: 1;
+}
+.toc-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+}
+.toc-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* ─── MAIN CONTENT ─── */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 2rem;
+}
+
+.section-header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--teal-dark) 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+.section-header .section-label {
+  color: var(--gold);
+}
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.section-header p {
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ─── CARDS ─── */
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--navy);
+}
+.card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--teal-dark);
+}
+.card ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+.card li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* ─── TABLES ─── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+th {
+  background: var(--teal-dark);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+tr:nth-child(even) { background: #faf9f7; }
+tr:hover { background: var(--teal-light); }
+
+/* ─── TAGS ─── */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.tag-teal { background: var(--teal-light); color: var(--teal-dark); }
+.tag-gold { background: var(--gold-light); color: #8b6914; }
+.tag-green { background: #e8f5e9; color: #1b5e20; }
+.tag-red { background: #fdeaea; color: #c0392b; }
+.tag-blue { background: #e8f0fe; color: #1a3a6e; }
+.tag-purple { background: #f3e8ff; color: #5b21b6; }
+
+/* ─── STATS GRID ─── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.stat-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.stat-card .stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1;
+}
+.stat-card .stat-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* ─── HIGHLIGHT BOX ─── */
+.highlight-box {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+.highlight-box h4 {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.75rem;
+}
+.highlight-box ul {
+  list-style: none;
+  margin: 0;
+}
+.highlight-box li {
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: rgba(255,255,255,0.9);
+}
+.highlight-box li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ─── WIREFRAME MOCKUPS ─── */
+.wireframe {
+  background: #f8f9fa;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+.wireframe::before {
+  content: 'WIREFRAME';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--teal);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+.wireframe-section {
+  background: white;
+  border: 1px solid #dde1e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.wireframe-section:last-child { margin-bottom: 0; }
+.wireframe-section .wf-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+.wireframe-section .wf-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.wf-hero {
+  background: linear-gradient(135deg, var(--navy), var(--teal-dark));
+  color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.wf-hero h3 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.wf-hero p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+.wf-video-placeholder {
+  background: #1a1a2e;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 1rem 0;
+  position: relative;
+}
+.wf-video-placeholder .play-btn {
+  width: 60px;
+  height: 60px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 20px rgba(201,150,60,0.4);
+}
+.wf-video-placeholder p {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.wf-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.wf-pillar {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+.wf-pillar:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+.wf-pillar .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.wf-pillar .name { font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+
+.wf-cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), #D4A843);
+  color: var(--navy);
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(201,150,60,0.3);
+  margin: 0.5rem;
+}
+
+/* ─── TIMELINE ─── */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2.5rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--teal), var(--gold));
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  background: var(--teal);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--teal);
+}
+.timeline-item.completed::before { background: var(--green); box-shadow: 0 0 0 2px var(--green); }
+.timeline-item .tl-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.timeline-item .tl-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+.timeline-item .tl-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+.timeline-item .tl-deliverables {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+.timeline-item .tl-deliverables span {
+  display: inline-block;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+/* ─── FLOW DIAGRAM ─── */
+.flow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+.flow-step {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  min-width: 120px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.flow-step .step-icon { font-size: 1.25rem; margin-bottom: 0.3rem; }
+.flow-step.active {
+  background: var(--teal);
+  color: white;
+  border-color: var(--teal);
+}
+.flow-arrow {
+  color: var(--gold);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ─── PRICING ─── */
+.pricing-card {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--teal-dark) 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 80%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(201,150,60,0.08), transparent 60%);
+}
+.pricing-card * { position: relative; }
+.pricing-card .price-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.pricing-card .price {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+}
+.pricing-card .price-note {
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+.pricing-includes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+.pricing-includes .include-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+.pricing-includes .include-item .check {
+  color: var(--gold);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.pricing-includes .include-item .include-text {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+.pricing-includes .include-item .include-text strong {
+  color: white;
+  display: block;
+}
+
+/* ─── PORTFOLIO ─── */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.portfolio-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+.portfolio-item:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+.portfolio-thumb {
+  background: linear-gradient(135deg, var(--teal-dark), var(--navy));
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.portfolio-info {
+  padding: 1.25rem;
+}
+.portfolio-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.portfolio-info p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+.portfolio-info .portfolio-tags {
+  margin-top: 0.75rem;
+}
+
+/* ─── COMPARISON TABLE ─── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.comparison-col {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.comparison-col.highlight {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 1px var(--teal);
+}
+.comparison-col h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border);
+}
+.comparison-col.highlight h4 {
+  border-bottom-color: var(--teal);
+  color: var(--teal);
+}
+.comparison-col ul {
+  list-style: none;
+  margin: 0;
+}
+.comparison-col li {
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.85rem;
+}
+.comparison-col li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+.comparison-col.highlight li::before {
+  content: '✓';
+  color: var(--green);
+}
+
+/* ─── GUARANTEE BOX ─── */
+.guarantee-box {
+  background: white;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+}
+.guarantee-box .guarantee-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.guarantee-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.guarantee-box p {
+  color: var(--text-light);
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--navy);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.footer .footer-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+.footer .footer-links {
+  margin: 1rem 0;
+}
+.footer .footer-links a {
+  color: var(--gold);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 0.9rem;
+}
+.footer .footer-links a:hover { text-decoration: underline; }
+.footer .footer-note {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .cover h1 { font-size: 2rem; }
+  .comparison-grid { grid-template-columns: 1fr; }
+  .pricing-card { padding: 2rem; }
+  .pricing-card .price { font-size: 3rem; }
+  .flow-diagram { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+}
+
+@media print {
+  .cover { min-height: auto; padding: 3rem 2rem; }
+  section { break-inside: avoid; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════ COVER ═══════════════════════════════════════════ -->
+<div class="cover">
+  <div class="hepatologia-badge">HEPATOLOGÍA</div>
+  <div class="medical-icon">🏥</div>
+  <h1>Embudo de Ventas para su <span>Curso de Gastroenterología</span></h1>
+  <p class="subtitle">Propuesta estratégica: landing page de alta conversión, portal de estudiantes seguro, integración de pagos con Mercado Pago, y branding médico profesional unificado.</p>
+  <div class="divider-line"></div>
+  <p class="meta">Preparado por <strong>SkynetJoe (Skynet Labs LLC)</strong> &mdash; Abril 2026</p>
+  <p class="meta" style="margin-top: 0.3rem;">Entrega garantizada: <strong>12 de Abril, 2026</strong> &mdash; 1 día antes del plazo</p>
+  <div class="agency-logo">
+    <div class="name">SKYNETJOE</div>
+    <div class="tagline">Web Design &bull; AI Automation &bull; Sales Funnels</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ TOC ═══════════════════════════════════════════ -->
+<div class="toc-section">
+  <div class="section-label">Contenido</div>
+  <h2>Tabla de Contenidos</h2>
+  <div class="toc-grid">
+    <a class="toc-card" href="#analysis">
+      <div class="num">01</div>
+      <h3>Análisis del Proyecto</h3>
+      <p>Desglose completo de los requisitos y nuestra estrategia de ejecución.</p>
+    </a>
+    <a class="toc-card" href="#landing">
+      <div class="num">02</div>
+      <h3>Landing Page de Ventas</h3>
+      <p>Wireframe detallado con VSL, pilares del curso, bio y CTAs.</p>
+    </a>
+    <a class="toc-card" href="#student">
+      <div class="num">03</div>
+      <h3>Portal de Estudiantes</h3>
+      <p>Página oculta con 5 videos Vimeo, acceso seguro con contraseña.</p>
+    </a>
+    <a class="toc-card" href="#payments">
+      <div class="num">04</div>
+      <h3>Pagos &amp; Automatización</h3>
+      <p>Mercado Pago + email automático de bienvenida con credenciales.</p>
+    </a>
+    <a class="toc-card" href="#branding">
+      <div class="num">05</div>
+      <h3>Branding Unificado</h3>
+      <p>Paleta de colores global, tipografía y identidad visual consistente.</p>
+    </a>
+    <a class="toc-card" href="#timeline">
+      <div class="num">06</div>
+      <h3>Cronograma</h3>
+      <p>Plan de 7 días con hitos claros y entrega anticipada.</p>
+    </a>
+    <a class="toc-card" href="#portfolio">
+      <div class="num">07</div>
+      <h3>Portfolio &amp; Credenciales</h3>
+      <p>Proyectos relevantes y experiencia en funnels de venta.</p>
+    </a>
+    <a class="toc-card" href="#pricing">
+      <div class="num">08</div>
+      <h3>Inversión</h3>
+      <p>Precio fijo con todo incluido. Sin sorpresas.</p>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ CONTENT ═══════════════════════════════════════════ -->
+<div class="content">
+
+<!-- ─── SECTION 1: ANALYSIS ─── -->
+<section id="analysis">
+  <div class="section-header">
+    <div class="section-label">Sección 01</div>
+    <h2>Análisis del Proyecto</h2>
+    <p>Entendimiento profundo de sus necesidades antes de escribir una sola línea de código.</p>
+  </div>
+
+  <div class="card">
+    <h3>Resumen del Brief</h3>
+    <p>Doctor especialista en Gastroenterología y Hepatología busca construir un ecosistema digital completo para vender y entregar su curso médico online. El proyecto requiere:</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Entregables principales</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Videos Vimeo a integrar</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Pasarela de pago</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Días de ejecución</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Desglose de Requisitos</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Requisito</th>
+          <th>Descripción</th>
+          <th>Herramientas</th>
+          <th>Complejidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Landing Page de Ventas</strong></td>
+          <td>Video VSL, pilares del curso, biografía del doctor, botones de pago, diseño de alta conversión</td>
+          <td><span class="tag tag-blue">Elementor Pro</span></td>
+          <td><span class="tag tag-gold">Media</span></td>
+        </tr>
+        <tr>
+          <td><strong>Portal de Estudiantes</strong></td>
+          <td>Página oculta/protegida con 5 videos Vimeo embebidos, navegación entre módulos</td>
+          <td><span class="tag tag-blue">Elementor</span> <span class="tag tag-purple">Vimeo</span></td>
+          <td><span class="tag tag-green">Baja</span></td>
+        </tr>
+        <tr>
+          <td><strong>Integración de Pagos</strong></td>
+          <td>Botones conectados a Mercado Pago, confirmación de compra</td>
+          <td><span class="tag tag-teal">Mercado Pago</span></td>
+          <td><span class="tag tag-gold">Media</span></td>
+        </tr>
+        <tr>
+          <td><strong>Email Automático</strong></td>
+          <td>Bienvenida post-compra con credenciales de acceso al portal</td>
+          <td><span class="tag tag-teal">WP Mail / SMTP</span></td>
+          <td><span class="tag tag-green">Baja</span></td>
+        </tr>
+        <tr>
+          <td><strong>Branding Global</strong></td>
+          <td>Actualizar paleta de colores y tipografía en todo el sitio para coincidir con landing</td>
+          <td><span class="tag tag-blue">Elementor Global</span></td>
+          <td><span class="tag tag-green">Baja</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight-box">
+    <h4>Mi Enfoque Estratégico</h4>
+    <ul>
+      <li><strong>Mobile-First</strong> — El 70%+ de tráfico médico viene de móvil. Diseñaré responsive desde el inicio.</li>
+      <li><strong>Velocidad de carga &lt;3s</strong> — Optimización de imágenes y lazy loading para los videos Vimeo.</li>
+      <li><strong>Psicología de conversión</strong> — Estructura VSL → dolor → solución → prueba social → CTA. Probada en funnels médicos.</li>
+      <li><strong>Seguridad del contenido</strong> — Protección por contraseña + restricción de iframe para videos Vimeo privados.</li>
+      <li><strong>Comunicación en español</strong> — Todo el desarrollo, comunicación y soporte en español nativo.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─── SECTION 2: LANDING PAGE ─── -->
+<section id="landing">
+  <div class="section-header">
+    <div class="section-label">Sección 02</div>
+    <h2>Landing Page de Ventas</h2>
+    <p>Diseño de alta conversión optimizado para cursos médicos premium.</p>
+  </div>
+
+  <div class="card">
+    <h3>Estructura del Embudo (Wireframe)</h3>
+    <p>La landing page sigue la estructura probada de funnels de venta para cursos online, adaptada específicamente al nicho de educación médica:</p>
+
+    <div class="wireframe">
+      <!-- HERO -->
+      <div class="wf-hero">
+        <div style="font-size: 0.7rem; color: rgba(255,255,255,0.4); font-family: 'Montserrat',sans-serif; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem;">SECCIÓN HERO — ABOVE THE FOLD</div>
+        <h3>Curso de [Especialidad] para Profesionales de la Salud</h3>
+        <p>Subtítulo con beneficio principal + credencial del doctor</p>
+        <div class="wf-video-placeholder" style="margin-top: 1rem;">
+          <div class="play-btn">▶</div>
+          <p>VIDEO DE VENTAS (VSL) — Vimeo Embed</p>
+          <p style="font-size: 0.7rem; color: rgba(255,255,255,0.3);">Autoplay sin sonido + miniatura personalizada</p>
+        </div>
+        <div style="margin-top: 1rem;">
+          <span class="wf-cta-btn">INSCRIBIRME AHORA →</span>
+        </div>
+      </div>
+
+      <!-- PILLARS -->
+      <div class="wireframe-section">
+        <div class="wf-label">Pilares del Curso</div>
+        <div class="wf-desc">Los módulos principales presentados como tarjetas con iconos médicos:</div>
+        <div class="wf-pillars-grid">
+          <div class="wf-pillar">
+            <div class="icon">🔬</div>
+            <div class="name">Módulo 1<br><small style="color: var(--text-light);">Diagnóstico</small></div>
+          </div>
+          <div class="wf-pillar">
+            <div class="icon">💊</div>
+            <div class="name">Módulo 2<br><small style="color: var(--text-light);">Tratamiento</small></div>
+          </div>
+          <div class="wf-pillar">
+            <div class="icon">📋</div>
+            <div class="name">Módulo 3<br><small style="color: var(--text-light);">Casos Clínicos</small></div>
+          </div>
+          <div class="wf-pillar">
+            <div class="icon">🎓</div>
+            <div class="name">Módulo 4<br><small style="color: var(--text-light);">Certificación</small></div>
+          </div>
+          <div class="wf-pillar">
+            <div class="icon">🏥</div>
+            <div class="name">Módulo 5<br><small style="color: var(--text-light);">Práctica</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIO -->
+      <div class="wireframe-section">
+        <div class="wf-label">Biografía del Doctor</div>
+        <div class="wf-desc">
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+            <div style="width: 80px; height: 80px; background: var(--teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">👨‍⚕️</div>
+            <div style="flex: 1; min-width: 200px;">
+              <strong>Dr. [Nombre] — Gastroenterólogo y Hepatólogo</strong><br>
+              <span style="color: var(--text-muted); font-size: 0.8rem;">Foto profesional a la izquierda + credenciales, años de experiencia, instituciones, publicaciones. Diseñado para generar autoridad y confianza.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div class="wireframe-section">
+        <div class="wf-label">Prueba Social (Opcional)</div>
+        <div class="wf-desc">Testimonios de estudiantes anteriores o colegas. Si no hay testimonios aún, usamos estadísticas como: "15+ años de experiencia", "X pacientes tratados", "Publicado en X revistas".</div>
+      </div>
+
+      <!-- CTA / PAYMENT -->
+      <div class="wireframe-section" style="background: var(--gold-light); border-color: var(--gold);">
+        <div class="wf-label" style="color: #8b6914;">Sección de Compra</div>
+        <div style="text-align: center; padding: 1rem 0;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--navy);">Acceso Completo al Curso</div>
+          <div style="font-size: 2rem; font-weight: 800; color: var(--teal); margin: 0.5rem 0;">$XX.XXX ARS</div>
+          <div style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 1rem;">Pago seguro a través de Mercado Pago</div>
+          <span class="wf-cta-btn">COMPRAR CON MERCADO PAGO →</span>
+          <div style="margin-top: 0.75rem;">
+            <span style="font-size: 0.75rem; color: var(--text-muted);">🔒 Pago 100% seguro &bull; Acceso inmediato &bull; Soporte incluido</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="wireframe-section">
+        <div class="wf-label">Preguntas Frecuentes (FAQ)</div>
+        <div class="wf-desc">Accordion con 5-7 preguntas comunes: ¿Para quién es el curso? ¿Cuánto dura el acceso? ¿Hay certificado? ¿Cómo pago? ¿Puedo pagar en cuotas?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Elementos de Conversión Clave</h3>
+    <div class="comparison-grid">
+      <div class="comparison-col">
+        <h4>Landing Genérica (Típica)</h4>
+        <ul>
+          <li>Texto largo sin estructura visual</li>
+          <li>Sin video de ventas o mal posicionado</li>
+          <li>Botón de pago perdido al final</li>
+          <li>Sin urgencia o escasez</li>
+          <li>No optimizada para móvil</li>
+          <li>Carga lenta (&gt;5 segundos)</li>
+        </ul>
+      </div>
+      <div class="comparison-col highlight">
+        <h4>Nuestra Landing (Propuesta)</h4>
+        <ul>
+          <li>Estructura VSL → Pilares → Bio → CTA probada</li>
+          <li>Video hero con autoplay + miniatura personalizada</li>
+          <li>CTA flotante (sticky) visible siempre</li>
+          <li>Contador de plazas o fecha límite (opcional)</li>
+          <li>100% responsive, mobile-first</li>
+          <li>Lazy loading, &lt;3s de carga</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 3: STUDENT PORTAL ─── -->
+<section id="student">
+  <div class="section-header">
+    <div class="section-label">Sección 03</div>
+    <h2>Portal de Estudiantes</h2>
+    <p>Página segura con acceso restringido para entregar el contenido del curso.</p>
+  </div>
+
+  <div class="card">
+    <h3>Arquitectura del Portal</h3>
+    <p>Una página oculta (no indexada) y protegida por contraseña donde los estudiantes acceden a los 5 módulos del curso con videos de Vimeo.</p>
+
+    <div class="wireframe">
+      <div class="wireframe-section" style="background: var(--teal-light); border-color: var(--teal);">
+        <div class="wf-label">Pantalla de Login</div>
+        <div style="text-align: center; padding: 1rem 0;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔐</div>
+          <div style="font-weight: 600; margin-bottom: 0.5rem;">Área de Estudiantes</div>
+          <div style="display: inline-block; background: white; border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 1.5rem; margin: 0.3rem; color: var(--text-muted); font-size: 0.85rem;">Ingrese su contraseña</div>
+          <div><span class="wf-cta-btn" style="margin-top: 0.5rem; font-size: 0.75rem;">ACCEDER →</span></div>
+        </div>
+      </div>
+
+      <div class="wireframe-section">
+        <div class="wf-label">Dashboard del Curso</div>
+        <div class="wf-desc">
+          <div style="display: grid; grid-template-columns: 200px 1fr; gap: 1rem; margin-top: 0.5rem;">
+            <div style="background: var(--navy); border-radius: 6px; padding: 1rem; color: white; font-size: 0.75rem;">
+              <div style="color: var(--gold); font-weight: 700; margin-bottom: 0.75rem;">MÓDULOS</div>
+              <div style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">▶ Módulo 1</div>
+              <div style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">▶ Módulo 2</div>
+              <div style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">▶ Módulo 3</div>
+              <div style="padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">▶ Módulo 4</div>
+              <div style="padding: 0.3rem 0;">▶ Módulo 5</div>
+            </div>
+            <div>
+              <div style="background: #1a1a2e; border-radius: 8px; padding: 3rem; text-align: center;">
+                <div style="width: 50px; height: 50px; background: var(--gold); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">▶</div>
+                <div style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 0.5rem;">Vimeo Player Embed (Privacy Mode)</div>
+              </div>
+              <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-light);">
+                Descripción del módulo, materiales descargables (si aplica), y navegación al siguiente módulo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Medidas de Seguridad</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Capa</th>
+          <th>Implementación</th>
+          <th>Propósito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Contraseña de WordPress</strong></td>
+          <td>Página protegida con password nativo de WP</td>
+          <td>Acceso restringido solo a compradores</td>
+        </tr>
+        <tr>
+          <td><strong>Vimeo Privacy</strong></td>
+          <td>Domain-level restriction en cada video</td>
+          <td>Videos solo reproducibles en su dominio</td>
+        </tr>
+        <tr>
+          <td><strong>No-Index</strong></td>
+          <td>Meta robots noindex + exclusión de sitemap</td>
+          <td>Google no indexa la página del curso</td>
+        </tr>
+        <tr>
+          <td><strong>Anti-Download</strong></td>
+          <td>Right-click disabled + Vimeo DRM settings</td>
+          <td>Prevenir descarga no autorizada</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ─── SECTION 4: PAYMENTS & AUTOMATION ─── -->
+<section id="payments">
+  <div class="section-header">
+    <div class="section-label">Sección 04</div>
+    <h2>Pagos &amp; Automatización</h2>
+    <p>Flujo completo: compra → confirmación → email automático → acceso al curso.</p>
+  </div>
+
+  <div class="card">
+    <h3>Flujo de Pago con Mercado Pago</h3>
+    <div class="flow-diagram">
+      <div class="flow-step">
+        <div class="step-icon">👤</div>
+        Estudiante visita landing
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="step-icon">💳</div>
+        Click en "Comprar"
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step active">
+        <div class="step-icon">🏦</div>
+        Checkout Mercado Pago
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="step-icon">✅</div>
+        Pago confirmado
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="step-icon">📧</div>
+        Email automático
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="step-icon">🎓</div>
+        Acceso al curso
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Opciones de Integración con Mercado Pago</h3>
+    <p>Dos enfoques posibles según su preferencia:</p>
+
+    <h4>Opción A: Botón de Pago Directo (Recomendada)</h4>
+    <ul>
+      <li><strong>Plugin:</strong> WooCommerce + Gateway de Mercado Pago oficial</li>
+      <li><strong>Ventaja:</strong> Checkout profesional, tarjetas de crédito/débito, transferencia, y cuotas</li>
+      <li><strong>Automatización:</strong> WooCommerce dispara el email automático al completarse el pago</li>
+      <li><strong>Cuotas:</strong> Mercado Pago soporta cuotas sin interés nativas</li>
+    </ul>
+
+    <h4>Opción B: Link de Pago de Mercado Pago</h4>
+    <ul>
+      <li><strong>Método:</strong> Botón redirige a checkout.mercadopago.com con link pre-generado</li>
+      <li><strong>Ventaja:</strong> Setup más simple, sin necesidad de WooCommerce</li>
+      <li><strong>Nota:</strong> El email se configura via webhook de Mercado Pago → servidor</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Email Automático de Bienvenida</h3>
+    <div class="wireframe">
+      <div class="wireframe-section" style="max-width: 500px; margin: 0 auto; border-color: var(--teal);">
+        <div style="text-align: center; padding: 1rem 0;">
+          <div style="font-size: 0.7rem; color: var(--teal); font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em; font-weight: 600;">PREVIEW DEL EMAIL</div>
+          <div style="margin-top: 1rem; border-top: 3px solid var(--teal); padding-top: 1rem;">
+            <div style="font-size: 1.5rem; margin-bottom: 0.3rem;">🎉</div>
+            <div style="font-family: 'Playfair Display',serif; font-size: 1.2rem; font-weight: 700;">¡Bienvenido/a al Curso!</div>
+            <div style="font-size: 0.85rem; color: var(--text-light); margin: 1rem 0; text-align: left; padding: 0 1rem;">
+              Estimado/a [Nombre],<br><br>
+              Su pago ha sido confirmado. Aquí están sus credenciales de acceso:<br><br>
+              <div style="background: var(--teal-light); padding: 0.75rem; border-radius: 6px; margin: 0.5rem 0;">
+                <strong>URL:</strong> sudominio.com/curso<br>
+                <strong>Contraseña:</strong> [contraseña-única]
+              </div>
+              <br>
+              Si tiene alguna pregunta, responda a este email.<br><br>
+              Saludos cordiales,<br>
+              Dr. [Nombre]
+            </div>
+            <span class="wf-cta-btn" style="font-size: 0.7rem;">ACCEDER AL CURSO →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Configuración Técnica del Email</h4>
+    <ul>
+      <li><strong>Trigger:</strong> Pago completado en WooCommerce / webhook de Mercado Pago</li>
+      <li><strong>Herramienta:</strong> WP Mail SMTP (con SendGrid, Mailgun, o SMTP de su hosting)</li>
+      <li><strong>Contenido:</strong> Plantilla HTML branded con logo, credenciales, y link directo</li>
+      <li><strong>Deliverability:</strong> Configuración SPF/DKIM para evitar spam</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─── SECTION 5: BRANDING ─── -->
+<section id="branding">
+  <div class="section-header">
+    <div class="section-label">Sección 05</div>
+    <h2>Branding Unificado</h2>
+    <p>Paleta de colores, tipografía y estilo visual consistente en todo el sitio.</p>
+  </div>
+
+  <div class="card">
+    <h3>Propuesta de Identidad Visual Médica</h3>
+    <p>La nueva identidad debe transmitir: <strong>autoridad médica</strong>, <strong>confianza</strong>, <strong>profesionalismo</strong> y <strong>modernidad</strong>. Aquí nuestra propuesta base (adaptable según su logo y preferencias):</p>
+
+    <h4>Paleta de Colores Propuesta</h4>
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1rem 0;">
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; background: #0A4D4A; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+        <div style="font-size: 0.7rem; font-weight: 600; margin-top: 0.4rem;">Teal Médico</div>
+        <div style="font-size: 0.65rem; color: var(--text-muted);">#0A4D4A</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; background: #0B1D3A; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+        <div style="font-size: 0.7rem; font-weight: 600; margin-top: 0.4rem;">Navy Profundo</div>
+        <div style="font-size: 0.65rem; color: var(--text-muted);">#0B1D3A</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; background: #C9963C; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+        <div style="font-size: 0.7rem; font-weight: 600; margin-top: 0.4rem;">Dorado Premium</div>
+        <div style="font-size: 0.65rem; color: var(--text-muted);">#C9963C</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; background: #FFFFFF; border: 1px solid #e2e6ec; border-radius: 8px;"></div>
+        <div style="font-size: 0.7rem; font-weight: 600; margin-top: 0.4rem;">Blanco Clínico</div>
+        <div style="font-size: 0.65rem; color: var(--text-muted);">#FFFFFF</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; background: #F5F3EE; border: 1px solid #e2e6ec; border-radius: 8px;"></div>
+        <div style="font-size: 0.7rem; font-weight: 600; margin-top: 0.4rem;">Crema Suave</div>
+        <div style="font-size: 0.65rem; color: var(--text-muted);">#F5F3EE</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; background: #22A06B; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+        <div style="font-size: 0.7rem; font-weight: 600; margin-top: 0.4rem;">Verde Acento</div>
+        <div style="font-size: 0.65rem; color: var(--text-muted);">#22A06B</div>
+      </div>
+    </div>
+
+    <h4>Tipografía</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Uso</th>
+          <th>Fuente</th>
+          <th>Peso</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Títulos principales</td>
+          <td><span style="font-family: 'Playfair Display', serif; font-weight: 700;">Playfair Display</span></td>
+          <td>700</td>
+          <td style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem;">Hepatología Avanzada</td>
+        </tr>
+        <tr>
+          <td>Subtítulos / UI</td>
+          <td><span style="font-family: 'Montserrat', sans-serif; font-weight: 600;">Montserrat</span></td>
+          <td>500-700</td>
+          <td style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em;">MÓDULO 1 — DIAGNÓSTICO</td>
+        </tr>
+        <tr>
+          <td>Cuerpo de texto</td>
+          <td><span style="font-family: 'Inter', sans-serif;">Inter</span></td>
+          <td>400</td>
+          <td>Este curso le enseñará las técnicas más avanzadas...</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem;"><strong>Nota:</strong> Estas son propuestas base. La paleta final se adaptará a su logo e identidad existente. Le presento opciones antes de aplicar cualquier cambio.</p>
+  </div>
+
+  <div class="card">
+    <h3>Alcance del Branding Global</h3>
+    <ul>
+      <li><strong>Elementor Global Colors:</strong> Actualizar los colores primarios, secundarios y de acento en todo el tema</li>
+      <li><strong>Elementor Global Fonts:</strong> Configurar las 3 fuentes como default del sitio</li>
+      <li><strong>Header &amp; Footer:</strong> Actualizar colores del menú, logo area, y footer</li>
+      <li><strong>Botones globales:</strong> Estilo unificado en todos los CTAs del sitio</li>
+      <li><strong>Formularios:</strong> Estilos consistentes en cualquier formulario existente</li>
+      <li><strong>Página "Acerca de":</strong> Asegurar consistencia visual si existe</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ─── SECTION 6: TIMELINE ─── -->
+<section id="timeline">
+  <div class="section-header">
+    <div class="section-label">Sección 06</div>
+    <h2>Cronograma de Ejecución</h2>
+    <p>7 días de trabajo con entrega el 12 de abril — 1 día antes de su deadline.</p>
+  </div>
+
+  <div class="card">
+    <h3>Plan de 7 Días</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-date">Día 1 — 6 de Abril (Hoy)</div>
+        <div class="tl-title">Kickoff &amp; Configuración</div>
+        <div class="tl-desc">Recopilar todos los assets (logo, textos, videos Vimeo, credenciales Mercado Pago). Configurar entorno de desarrollo.</div>
+        <div class="tl-deliverables">
+          <span>Checklist de assets</span>
+          <span>Acceso WP confirmado</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">Día 2-3 — 7-8 de Abril</div>
+        <div class="tl-title">Landing Page de Ventas</div>
+        <div class="tl-desc">Diseño completo en Elementor. Hero con VSL, pilares, bio, prueba social, FAQ, y sección de compra con CTA.</div>
+        <div class="tl-deliverables">
+          <span>Landing page live</span>
+          <span>VSL integrado</span>
+          <span>Responsive QA</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">Día 4 — 9 de Abril</div>
+        <div class="tl-title">Portal de Estudiantes</div>
+        <div class="tl-desc">Página oculta con 5 videos Vimeo, navegación entre módulos, protección por contraseña, configuración de privacidad Vimeo.</div>
+        <div class="tl-deliverables">
+          <span>Portal completo</span>
+          <span>5 videos embed</span>
+          <span>Password lock</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">Día 5 — 10 de Abril</div>
+        <div class="tl-title">Mercado Pago &amp; Email</div>
+        <div class="tl-desc">Integración de pasarela de pago, configuración del botón de compra, template de email automático de bienvenida.</div>
+        <div class="tl-deliverables">
+          <span>Mercado Pago activo</span>
+          <span>Email template</span>
+          <span>Test de compra</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">Día 6 — 11 de Abril</div>
+        <div class="tl-title">Branding Global</div>
+        <div class="tl-desc">Actualizar paleta de colores y tipografía en todo el sitio. Header, footer, botones, formularios — todo consistente.</div>
+        <div class="tl-deliverables">
+          <span>Colores globales</span>
+          <span>Tipografía</span>
+          <span>UI consistency</span>
+        </div>
+      </div>
+
+      <div class="timeline-item completed">
+        <div class="tl-date">Día 7 — 12 de Abril (Entrega)</div>
+        <div class="tl-title">QA Final &amp; Entrega</div>
+        <div class="tl-desc">Testing completo: móvil, tablet, desktop. Test de pago real. Verificar emails. Documentar accesos. Handoff.</div>
+        <div class="tl-deliverables">
+          <span>QA completo</span>
+          <span>Documentación</span>
+          <span>Video walkthrough</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h4>Buffer de Seguridad</h4>
+      <ul>
+        <li>Entrega programada para el <strong>12 de abril</strong> — 1 día completo antes del deadline del 13.</li>
+        <li>Si hay revisiones el día 12, el día 13 es nuestro buffer para ajustes finales.</li>
+        <li>Comunicación diaria vía Upwork chat con actualizaciones de progreso.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 7: PORTFOLIO ─── -->
+<section id="portfolio">
+  <div class="section-header">
+    <div class="section-label">Sección 07</div>
+    <h2>Portfolio &amp; Credenciales</h2>
+    <p>Proyectos relevantes que demuestran mi capacidad para este trabajo.</p>
+  </div>
+
+  <div class="card">
+    <h3>Proyectos Relevantes</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1a1a2e, #7B61FF);">🤖</div>
+        <div class="portfolio-info">
+          <h4>SkynetJoe Agency Website</h4>
+          <p>Tema WordPress premium con 14 páginas de servicio, 10 herramientas AI, animaciones, y funnels de captación.</p>
+          <div class="portfolio-tags">
+            <span class="tag tag-blue">WordPress</span>
+            <span class="tag tag-purple">30K+ líneas</span>
+            <span class="tag tag-teal">Sales Funnel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0A4D4A, #22A06B);">🛠️</div>
+        <div class="portfolio-info">
+          <h4>SkynetLabs Toolkit</h4>
+          <p>47 herramientas gratuitas para freelancers. React + Vite + Vercel con analytics dashboard.</p>
+          <div class="portfolio-tags">
+            <span class="tag tag-blue">React</span>
+            <span class="tag tag-green">Live</span>
+            <span class="tag tag-teal">47 Tools</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0B1D3A, #C9963C);">🚽</div>
+        <div class="portfolio-info">
+          <h4>Pretty Potty NYC</h4>
+          <p>Landing page de lujo para servicios de alquiler. 5 variantes de diseño, Vercel deploy, WhatsApp integration.</p>
+          <div class="portfolio-tags">
+            <span class="tag tag-blue">Landing Page</span>
+            <span class="tag tag-gold">Premium Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #2d1b69, #E34935);">📧</div>
+        <div class="portfolio-info">
+          <h4>AEO Content Engine</h4>
+          <p>Motor de contenido automatizado con n8n + GPT-4.1. Genera artículos, newsletters y video scripts.</p>
+          <div class="portfolio-tags">
+            <span class="tag tag-purple">n8n Automation</span>
+            <span class="tag tag-teal">AI Pipeline</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>¿Por Qué Yo?</h3>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">30K+</div>
+        <div class="stat-label">Líneas de código WordPress</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">14</div>
+        <div class="stat-label">Páginas de servicio creadas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">47</div>
+        <div class="stat-label">Herramientas web lanzadas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Funnels de venta construidos</div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h4>Lo Que Me Diferencia</h4>
+      <ul>
+        <li><strong>Expertise en WordPress + Elementor:</strong> Tema premium de 30K+ líneas construido desde cero.</li>
+        <li><strong>Experiencia con pasarelas de pago:</strong> WooCommerce, Stripe, PayPal, y ahora Mercado Pago.</li>
+        <li><strong>Automatización:</strong> Experto en n8n, webhooks, y flujos de email automatizados.</li>
+        <li><strong>Español fluido:</strong> Comunicación clara, sin barreras de idioma.</li>
+        <li><strong>Entrega rápida:</strong> Historial de entregas antes del deadline en todos mis proyectos.</li>
+        <li><strong>Diseño orientado a conversión:</strong> No solo "bonito" — diseñado para que sus estudiantes compren.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 8: PRICING ─── -->
+<section id="pricing">
+  <div class="section-header">
+    <div class="section-label">Sección 08</div>
+    <h2>Inversión</h2>
+    <p>Precio fijo transparente. Todo incluido. Sin costos ocultos.</p>
+  </div>
+
+  <div class="pricing-card">
+    <div class="price-label">Precio Fijo — Todo Incluido</div>
+    <div class="price">$200 USD</div>
+    <div class="price-note">Dentro de su presupuesto de $250 — ahorra $50</div>
+
+    <div class="pricing-includes">
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>Landing Page Completa</strong>
+          VSL + pilares + bio + FAQ + CTAs
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>Portal de Estudiantes</strong>
+          5 videos Vimeo + acceso seguro
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>Mercado Pago Integrado</strong>
+          Botones de pago + checkout
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>Email Automático</strong>
+          Bienvenida con credenciales
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>Branding Global</strong>
+          Colores + tipografía en todo el sitio
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>7 Días de Soporte Post-Entrega</strong>
+          Ajustes menores incluidos
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>Responsive Design</strong>
+          Móvil, tablet y desktop
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="check">✓</div>
+        <div class="include-text">
+          <strong>Video Walkthrough</strong>
+          Tutorial de cómo gestionar todo
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guarantee-box">
+    <div class="guarantee-icon">🛡️</div>
+    <h3>Garantía de Satisfacción</h3>
+    <p>Si el resultado final no cumple con los requisitos acordados, haré las revisiones necesarias sin costo adicional hasta que esté 100% satisfecho. Su curso merece una presencia digital impecable.</p>
+  </div>
+
+  <div class="card">
+    <h3>Próximos Pasos</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Paso</th>
+          <th>Acción</th>
+          <th>Tiempo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Aceptar propuesta</strong></td>
+          <td>Responder en Upwork para iniciar el proyecto</td>
+          <td>Hoy</td>
+        </tr>
+        <tr>
+          <td><strong>2. Compartir assets</strong></td>
+          <td>Enviar: acceso WP, logo, textos, links Vimeo, cuenta Mercado Pago</td>
+          <td>Día 1</td>
+        </tr>
+        <tr>
+          <td><strong>3. Kickoff call (opcional)</strong></td>
+          <td>Llamada de 15 min para alinear visión y preferencias</td>
+          <td>Día 1</td>
+        </tr>
+        <tr>
+          <td><strong>4. Desarrollo</strong></td>
+          <td>7 días de ejecución con updates diarios</td>
+          <td>Días 1-7</td>
+        </tr>
+        <tr>
+          <td><strong>5. Entrega &amp; QA</strong></td>
+          <td>Testing completo + documentación + video tutorial</td>
+          <td>Día 7</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</div><!-- end .content -->
+
+<!-- ═══════════════════════════════════════════ UPWORK PROPOSAL ═══════════════════════════════════════════ -->
+<div class="content">
+  <section id="proposal">
+    <div class="section-header" style="background: linear-gradient(135deg, #C9963C, #D4A843); color: var(--navy);">
+      <div class="section-label" style="color: var(--navy);">Texto de Propuesta para Upwork</div>
+      <h2 style="color: var(--navy);">Copiar y Enviar</h2>
+      <p style="color: rgba(11,29,58,0.7);">Este es el texto listo para pegar en Upwork. Comienza con HEPATOLOGÍA como requiere el cliente.</p>
+    </div>
+
+    <div class="card" style="background: #fffdf5; border-color: var(--gold); border-width: 2px;">
+      <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
+<strong style="font-size: 1.1rem;">HEPATOLOGÍA</strong>
+
+Estimado Doctor,
+
+Soy Waseem, desarrollador WordPress especializado en funnels de venta para cursos online. He leído su brief completo y entiendo exactamente lo que necesita. Le propongo entregar todo el proyecto en 7 días (12 de abril), un día antes de su deadline.
+
+<strong>Mi plan de ejecución:</strong>
+
+<strong>1. Landing Page de Ventas (Elementor)</strong>
+→ Hero section con su VSL de Vimeo (autoplay + miniatura personalizada)
+→ Sección de pilares del curso con iconos y descripciones
+→ Biografía profesional con foto y credenciales
+→ Sección de compra con botón de Mercado Pago
+→ FAQ accordion + elementos de confianza
+→ 100% responsive (móvil, tablet, desktop)
+
+<strong>2. Portal de Estudiantes (Página Oculta)</strong>
+→ Página protegida por contraseña (no indexada por Google)
+→ 5 videos Vimeo embebidos con navegación entre módulos
+→ Restricción de dominio en Vimeo para evitar compartir los links
+→ Diseño limpio y fácil de navegar
+
+<strong>3. Mercado Pago + Email Automático</strong>
+→ Integración via WooCommerce + plugin oficial de Mercado Pago
+→ Soporte para tarjetas, transferencia y cuotas
+→ Email automático de bienvenida con URL + contraseña del curso
+→ Test de compra real antes de la entrega
+
+<strong>4. Branding Global</strong>
+→ Paleta de colores actualizada en todo el sitio (Elementor Global)
+→ Tipografía consistente (títulos, subtítulos, cuerpo)
+→ Header, footer, botones — todo unificado con la landing
+
+<strong>¿Por qué elegirme?</strong>
+• Tema WordPress premium de 30,000+ líneas construido desde cero
+• Experiencia comprobada con WooCommerce, pasarelas de pago y automatización de emails
+• Comunicación 100% en español
+• Entrega antes del deadline en TODOS mis proyectos
+• 7 días de soporte post-entrega incluidos
+
+<strong>Precio: $200 USD</strong> (dentro de su presupuesto, ahorra $50)
+
+¿Le gustaría programar una llamada rápida de 15 minutos para alinear la visión? Puedo empezar hoy mismo.
+
+Saludos cordiales,
+Waseem Nasir
+SkynetJoe — skynetjoe.com</div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════ FOOTER ═══════════════════════════════════════════ -->
+<div class="footer">
+  <div class="footer-brand">SKYNETJOE</div>
+  <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Web Design &bull; AI Automation &bull; Sales Funnels</div>
+  <div class="footer-links">
+    <a href="https://skynetjoe.com">skynetjoe.com</a>
+    <a href="https://github.com/waseemnasir2k26">GitHub</a>
+  </div>
+  <div class="footer-note">Propuesta preparada exclusivamente para el proyecto de Hepatología — Abril 2026</div>
+</div>
+
+</body>
+</html>
